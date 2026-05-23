@@ -1,43 +1,66 @@
-Make sure you have Python 3.14 and Flask installed
+# 🎵 Clarinet Web Application
 
-text
+An interactive, browser-based virtual clarinet application built using Python and the Flask framework. This project demonstrates backend routing, frontend audio initialization, and event-driven user interfaces.
+
+---
+
+## 🚀 Features
+* **Interactive UI:** Clickable piano-style keys mapped to responsive instrument audio.
+* **Audio Unlocking Architecture:** Bypasses aggressive modern browser security restrictions requiring user interaction before audio initialization.
+* **Lightweight Backend:** Built entirely on top of Flask routing for reliable local environments.
+
+---
+
+## 🛠️ Prerequisites
+
+Before you begin, ensure you have the following installed on your machine:
+* [Python 3.10+](https://www.python.org/downloads/)
+* [Git](https://git-scm.com)
+
+---
+
+## 💻 Installation & Setup
+
+Follow these steps to clone the project, install required dependencies, and get it running locally.
+
+### 1. Clone the Repository
+Open your terminal or command prompt and clone this repository to your machine:
+```bash
+git clone https://github.com
+cd YOUR-REPO-NAME
+```
+
+### 2. Install Dependencies
+Install the required micro-framework libraries via pip:
+```bash
 pip install flask
-Locate the folder where clarinet_app.py is saved
+```
 
-If you downloaded it or saved it manually, remember where (e.g., Documents\my_projects\clarinet_app.py).
+### 3. Launch the Application
+Run the main entry script to spin up the local development server:
+```bash
+python clarinet_app.py
+```
 
-Open File Explorer and go to that folder.
+### 4. Access the Application
+Once the terminal displays that the server is active, open your favorite browser and navigate to:
+👉 **[http://127.0.0.1:5000](http://127.0.0.1:5000)**
 
-Open a terminal in that folder
+---
 
-Windows: Click the address bar in File Explorer, type cmd, and press Enter.
+## 🎹 How to Play
+1. **Unlock the Audio:** Click anywhere on the browser window or select a key. *Modern browsers require a physical user gesture to grant media playback policies.*
+2. **Play Notes:** Click the individual white keys to trigger distinct synthesized clarinet notes.
 
-Mac/Linux: Right-click inside the folder → "Open in Terminal".
+---
 
-Run the app
+## ⚙️ Troubleshooting & Administration
 
-text
-python clarinet_app.py(file you name it)
-Open your browser and go to:
+* **Stopping the App:** To shut down the local background server process, click into your active terminal instance and press `Ctrl + C`.
+* **Port Conflict Errors (`Address already in use`):** If you are running another local project on port 5000, open `clarinet_app.py` in your text editor. Find the final line and modify the port definition:
+  ```python
+  app.run(debug=True, port=5001)
+  ```
+* **Asset Visual Glitches:** If keys fail to align or register animations upon startup, perform a hard cache clearance using `Ctrl + F5` (or `Cmd + Shift + R` on macOS).
 
-example text
-http://13490234
-(that's your own computer – the number is the port number Flask uses)
-
-Click the white keys – each one plays a different clarinet‑like note.
-
-To stop the server
-Press Ctrl + C in the terminal.
-
-Notes
-The first click on the page also "unlocks" audio (browser security rule).
-
-If you don't hear sound, check your computer's volume.
-
-Troubleshooting
-"Port something already in use" – close other Flask apps or change the port in clarinet_app.py (last line: app.run(debug=True, port=something)).
-
-No keys appear – hard refresh the page (Ctrl + F5).
-
-That should cover it. Want me to add a note about using cd in the terminal instead of File Explorer for advanced users?
 
